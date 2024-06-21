@@ -21,6 +21,6 @@ engine = create_engine(db_url, echo=False)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-session.execute("CREATE SCHEMA IF NOT EXISTS appointment")
+session.execute("CREATE SCHEMA IF NOT EXISTS models")
 session.commit()
 
