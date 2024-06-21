@@ -4,10 +4,8 @@ import os
 
 # importando os elementos definidos no modelo
 from models.base import Base
-from models.schedule import Schedule
-from models.doctor_to_clinic import DoctorClinic
-from models.doctor import Doctor
-from models.clinic import Clinic
+from models.cloth import Cloth
+
 
 
 
