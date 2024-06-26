@@ -3,9 +3,8 @@ from typing import List
 from models.cloth import Cloth 
 
 class ClothSchema(BaseModel):
-  """ Define como uma clinica a ser inserida deve ser representada
+  """ Define como uma Roupa a ser inserida deve ser representada
   """
-  id: int = -1
   user_id: int = -1
   model_name: str = 'nome do modelo'
   model_bytes: bytes = b'bytes do modelo'
@@ -32,7 +31,7 @@ def apresenta_roupas(clothes: Cloth):
     for cloth in clothes:
         result.append(apresenta_doutor(doctor))
 
-    return {"roupas":result}
+    return {"Roupas":result}
 
 
 

@@ -1,7 +1,9 @@
-from sqlalchemy import Column, String, Integer, Sequence
+from sqlalchemy import Column, String, Integer, Sequence, LargeBinary
 from sqlalchemy.orm import relationship
 from  models import Base
 from dataclasses import dataclass
+
+
 
 @dataclass
 class Cloth(Base):

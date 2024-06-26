@@ -1,0 +1,7 @@
+[2024-06-21 20:59:47,535] INFO [33mPress CTRL+C to quit[0m - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-06-21 20:59:50,732] INFO 127.0.0.1 - - [21/Jun/2024 20:59:50] "GET /openapi/swagger HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-06-21 20:59:50,982] INFO 127.0.0.1 - - [21/Jun/2024 20:59:50] "[36mGET /openapi/static/js/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-06-21 20:59:50,998] INFO 127.0.0.1 - - [21/Jun/2024 20:59:50] "[36mGET /openapi/static/css/swagger-ui.css HTTP/1.1[0m" 304 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-06-21 20:59:51,013] INFO 127.0.0.1 - - [21/Jun/2024 20:59:51] "[36mGET /openapi/static/js/swagger-ui-bundle.js HTTP/1.1[0m" 304 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-06-21 20:59:51,124] INFO 127.0.0.1 - - [21/Jun/2024 20:59:51] "GET /openapi/openapi.json HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-06-21 20:59:51,129] INFO 127.0.0.1 - - [21/Jun/2024 20:59:51] "[36mGET /openapi/static/images/swagger.svg HTTP/1.1[0m" 304 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 

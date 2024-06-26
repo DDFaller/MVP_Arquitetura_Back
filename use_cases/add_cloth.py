@@ -2,7 +2,7 @@ from sqlalchemy.exc import IntegrityError
 from models.cloth import Cloth
 from logger import logger
 
-def add_doctor(form,session):
+def add_cloth(form,session):
     """Adiciona um novo Produto à base de dados
 
     Retorna uma representação dos produtos e comentários associados.

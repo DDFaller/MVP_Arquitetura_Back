@@ -1,7 +1,7 @@
 from models.cloth import Cloth
 from sqlalchemy.exc import IntegrityError
 from logger import logger
-from schemas.doctor import apresenta_doutores
+from schemas.clothes import apresenta_roupas
 
 def delete_cloth(id,session):
     try:

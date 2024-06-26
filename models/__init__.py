@@ -5,7 +5,8 @@ import os
 # importando os elementos definidos no modelo
 from models.base import Base
 from models.cloth import Cloth
-
+from models.user_address import UserAddress
+from models.user import User
 
 
 
@@ -19,6 +20,6 @@ engine = create_engine(db_url, echo=False)
 Session = sessionmaker(bind=engine)
 session = Session()
 
-session.execute("CREATE SCHEMA IF NOT EXISTS models")
+
 session.commit()
 

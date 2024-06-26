@@ -1,15 +1,10 @@
 from models import *
 #Add
-from .add_doctor import add_doctor
-from .add_schedule import add_schedule
+from .add_cloth import add_cloth
+
 #Get
-from .get_schedules import get_schedules
-from .get_doctors import get_doctors
-from .get_clinics import get_clinics
-from .get_clinics_by_doctor import get_clinics_by_doctor
-from .get_schedule_by_doctor_and_clinic import get_schedule_by_doctor_clinic
 from .login_user import login_user
-from .find_schedule import find_schedule
+from .get_clothes import get_clothes
+from .get_address_by_user import get_addresses_by_user
 #Delete
-from .delete_schedule import delete_schedules
-from .delete_doctor import delete_doctor
+from .delete_cloth import delete_cloth
