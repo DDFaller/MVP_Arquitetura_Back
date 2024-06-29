@@ -15,4 +15,4 @@ class Cloth(Base):
     id = Column(Integer,Sequence('models.clothes_id_seq'),primary_key=True)
     user_id = Column(Integer)
     model_name = Column(String(140))
-    model_bytes = Column(LargeBinary)
+    model_url = Column(String(140))

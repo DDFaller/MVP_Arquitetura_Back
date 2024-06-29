@@ -11,14 +11,14 @@ def add_cloth(form,session):
     cloth = Cloth(
         user_id=form.user_id,
         model_name=form.model_name,
-        model_bytes=form.model_bytes
+        model_url=form.model_url
         )
     try:
         # adicionando produto
         session.add(cloth)
         # efetivando o camando de adição de novo item na tabela
         session.commit()
-        return  {"message":"Doutor adicionado"}, 200
+        return  {"message":"Modelo adicionado"}, 200
     except IntegrityError as e:
         # como a duplicidade do nome é a provável razão do IntegrityError
         error_msg = "Produto de mesmo nome e marca já salvo na base :/"
@@ -27,6 +27,6 @@ def add_cloth(form,session):
 
     except Exception as e:
         # caso um erro fora do previsto
-        error_msg = "Não foi possível salvar novo item :/"
+        error_msg = "Não foi possível salvar novo item :/" + str(e)
         logger.warning(f"Erro ao adicionar modelo '{cloth.model_name}', {error_msg}")
         return {"mesage": error_msg}, 400

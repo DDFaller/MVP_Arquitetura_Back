@@ -8,7 +8,7 @@ cloth = Table(
     Column('id',Integer,Sequence('models.clothes_id_seq',start=1),primary_key=True),
     Column('user_id',Integer),
     Column('model_name',String(140)),
-    Column('model_bytes',LargeBinary)
+    Column('model_url',String(140))
 )
 
 metadata.create_all()

@@ -11,12 +11,12 @@ def delete_cloth(id,session):
         session.commit()
         if not doctor:
             # se não há produtos cadastrados
-            print("Doutor não encontrado")
+            print("Modelo não encontrado")
             return {"mensagem": "Agendamento não encontrado"}, 204
         else:
             logger.debug(f"%d rodutos econtrados" % len(cloth))
             # retorna a representação de produto
-            return {"agendamentos": str(cloth)}, 200
+            return {"Modelo": str(cloth)}, 200
         
     except Exception as e:
         error_msg = "Não foi possível excluir o médico :/"

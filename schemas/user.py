@@ -15,16 +15,29 @@ class UserLoginSchema(BaseModel):
   cpf: str
   password: str
 
+class UserIdSchema(BaseModel):
+  """ Define com um usuário pode ser retornado para Login
+  """
+  user_id: int
 
-def apresenta_usuario(user):
+
+
+def apresenta_usuario(user, show_id = False):
     """ Retorna uma representação do produto seguindo o schema definido em
         ProdutoViewSchema.
     """
-
-    return {
-        "cpf": user.cpf,
-        "password": user.password
-    }
+    if (show_id == True):
+        return {
+            "id": user.id,
+            "cpf": user.cpf,
+            "password": user.password
+        }
+    else:
+        return {
+            "cpf": user.cpf,
+            "password": user.password
+        }
+        
 
 def loga_usuario(user):
     return{
