@@ -6,6 +6,9 @@ load_dotenv()
 
 S3_COMMUNICATION_API = os.getenv('S3_COMMUNICATION_API')
 
+if not S3_COMMUNICATION_API:
+  raise ValueError("No EXPRESS_API_URL set for Flask application")
+  
 def getModelUrl(user_id,model_name):
   endpoint = 'get'
   headers= {'Content-Type':'application/json'}

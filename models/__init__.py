@@ -9,12 +9,13 @@ from models.user_address import UserAddress
 from models.user import User
 
 
-
 # url de acesso ao banco (essa é uma url de acesso ao sqlite local)
-db_url = 'postgresql://postgres:0812@localhost:5432/mvp'
+database_url = os.getenv('DATABASE_URL')
+if not database_url:
+    raise ValueError("No DATABASE_URL set for Flask application")
 
 # cria a engine de conexão com o banco
-engine = create_engine(db_url, echo=False)
+engine = create_engine(database_url, echo=False)
 
 # Instancia um criador de seção com o banco
 Session = sessionmaker(bind=engine)

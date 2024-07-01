@@ -108,4 +108,3 @@ def get_cloth_model(form: ClothSchema):
     
     session.close()
     return response
-

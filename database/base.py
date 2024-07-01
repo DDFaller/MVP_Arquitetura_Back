@@ -5,10 +5,13 @@ import os
 from sqlalchemy.sql import text
 
 
-db_url = 'postgresql://postgres:0812@localhost:5432/mvp'
+database_url = os.getenv('DATABASE_URL')
+if not database_url:
+    raise ValueError("No DATABASE_URL set for Flask application")
+
 
 # cria a engine de conexão com o banco
-engine = create_engine(db_url, echo=False)
+engine = create_engine(database_url, echo=False)
 inspector_schemas = inspect(engine).get_schema_names()
 
 with engine.connect() as connection:
