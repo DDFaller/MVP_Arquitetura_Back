@@ -12,7 +12,7 @@ class Cloth(Base):
     __tablename__ = "clothes"
     __table_args__ = {"schema": "models"}
 
-    id = Column(Integer,Sequence('models.clothes_id_seq'),primary_key=True)
+    id = Column(Integer,primary_key=True)
     user_id = Column(Integer)
     model_name = Column(String(140))
     model_url = Column(String(140))

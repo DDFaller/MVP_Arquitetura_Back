@@ -10,7 +10,7 @@ class UserAddress(Base):
     __tablename__ = "user_address"
     __table_args__ = {"schema": "user"}
 
-    id = Column(Integer,Sequence('user.user_address_id_seq'),primary_key=True)
+    id = Column(Integer,primary_key=True)
     user_id = Column(Integer)
     cep = Column(String(140))
     city = Column(String(140))

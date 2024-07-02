@@ -22,13 +22,13 @@ def register_user(form,session):
           else:
             session.add(user)
             session.commit()
-            return apresenta_usuario(user), 200
+            return apresenta_usuario(user,show_id=True), 200
         else:
           # adicionando produto
           session.add(user)
           # efetivando o camando de adição de novo item na tabela
           session.commit()
-          return  apresenta_usuario(user), 200
+          return  apresenta_usuario(user,show_id=True), 200
     except IntegrityError as e:
         # como a duplicidade do nome é a provável razão do IntegrityError
         error_msg = "Usuario já salvo na base :/"

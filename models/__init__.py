@@ -10,6 +10,7 @@ from models.user import User
 
 
 # url de acesso ao banco (essa é uma url de acesso ao sqlite local)
+
 database_url = os.getenv('DATABASE_URL')
 if not database_url:
     raise ValueError("No DATABASE_URL set for Flask application")

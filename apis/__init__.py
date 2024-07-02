@@ -1,1 +1,1 @@
-from .s3 import getModelUrl
+from .s3 import getModelUrl, deleteFileFromS3, renameFileFromS3

@@ -10,6 +10,6 @@ class User(Base):
     __tablename__ = "user_data"
     __table_args__ = {"schema": "user"}
 
-    id = Column(Integer,Sequence('user.user_id_seq'),primary_key=True)
+    id = Column(Integer,primary_key=True)
     cpf = Column(String(140))
     password = Column(String(140))

@@ -1,78 +1,52 @@
-[2024-06-28 22:54:12,322] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:54:15,477] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 22:54:15,590] INFO 127.0.0.1 - - [28/Jun/2024 22:54:15] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:55:10,966] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:55:11,058] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:55:13,688] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 22:55:13,813] INFO 127.0.0.1 - - [28/Jun/2024 22:55:13] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:55:47,043] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:55:47,127] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:55:51,913] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 22:55:52,017] ERROR Exception on /clothes [POST] - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py L1449
-Traceback (most recent call last):
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask_openapi3\scaffold.py", line 191, in wrapper
-    resp = _do_wrapper(
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-  File "D:\Workspace\MVP\arquitetura\back\app.py", line 77, in user_clothes
-    url = getModelUrl(form.user_id, response[0]['Roupas'][i].model_name)
-AttributeError: 'dict' object has no attribute 'model_name'
-[2024-06-28 22:55:52,020] INFO 127.0.0.1 - - [28/Jun/2024 22:55:52] "[35m[1mPOST /clothes HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:56:03,755] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:56:03,832] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:56:06,447] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:56:06,537] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:56:10,651] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 22:56:10,764] ERROR Exception on /clothes [POST] - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py L1449
-Traceback (most recent call last):
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
-    return cors_after_request(app.make_response(f(*args, **kwargs)))
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 1503, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask_openapi3\scaffold.py", line 191, in wrapper
-    resp = _do_wrapper(
-  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
-    response = func(**request_kwargs)
-  File "D:\Workspace\MVP\arquitetura\back\app.py", line 77, in user_clothes
-    url = getModelUrl(form.user_id, response[0]['Roupas'][i].model_name)
-AttributeError: 'dict' object has no attribute 'model_name'
-[2024-06-28 22:56:10,767] INFO 127.0.0.1 - - [28/Jun/2024 22:56:10] "[35m[1mPOST /clothes HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:56:27,476] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:56:27,568] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:56:31,255] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:56:31,327] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:56:40,815] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 22:56:40,985] INFO 127.0.0.1 - - [28/Jun/2024 22:56:40] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:59:58,018] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 22:59:58,021] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 22:59:58,058] INFO 127.0.0.1 - - [28/Jun/2024 22:59:58] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 22:59:58,148] INFO 127.0.0.1 - - [28/Jun/2024 22:59:58] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 23:00:30,289] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 23:00:30,327] INFO 127.0.0.1 - - [28/Jun/2024 23:00:30] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 23:00:48,271] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 23:00:48,303] INFO 127.0.0.1 - - [28/Jun/2024 23:00:48] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 23:01:14,265] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 23:01:14,297] INFO 127.0.0.1 - - [28/Jun/2024 23:01:14] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 23:01:22,410] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 23:01:22,448] INFO 127.0.0.1 - - [28/Jun/2024 23:01:22] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 23:01:45,272] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 23:01:45,305] INFO 127.0.0.1 - - [28/Jun/2024 23:01:45] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 23:01:52,269] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
-[2024-06-28 23:01:52,300] INFO 127.0.0.1 - - [28/Jun/2024 23:01:52] "POST /clothes HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
-[2024-06-28 23:01:57,272] WARNING Realizando busca por modelos - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\get_clothes.py L7   
+[2024-07-02 12:28:53,562] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:29:00,477] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\delete_cloth.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:29:00,546] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:29:03,171] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\delete_cloth.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:29:03,271] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:29:17,800] WARNING Erro ao remover médico '15', Não foi possível excluir o modelo :/'data' - call_trace=D:\Workspace\MVP\arquitetura\back\use_cases\delete_cloth.py L23  
+[2024-07-02 12:29:17,802] INFO 127.0.0.1 - - [02/Jul/2024 12:29:17] "DELETE /cloth HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:32:46,151] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\apis\\s3.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:32:46,237] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:36:30,241] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:36:30,325] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:36:52,429] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\delete_cloth.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:36:52,500] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:37:21,473] INFO 127.0.0.1 - - [02/Jul/2024 12:37:21] "POST /cloth HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:37:28,236] INFO 127.0.0.1 - - [02/Jul/2024 12:37:28] "[35m[1mDELETE /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:38:28,934] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\delete_cloth.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:38:29,023] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:38:32,071] INFO 127.0.0.1 - - [02/Jul/2024 12:38:32] "POST /cloth HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:38:48,383] INFO 127.0.0.1 - - [02/Jul/2024 12:38:48] "[35m[1mDELETE /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:39:10,260] INFO 127.0.0.1 - - [02/Jul/2024 12:39:10] "[35m[1mDELETE /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:39:38,362] INFO 127.0.0.1 - - [02/Jul/2024 12:39:38] "POST /cloth HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:39:51,332] INFO 127.0.0.1 - - [02/Jul/2024 12:39:51] "[35m[1mDELETE /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:39:59,249] INFO 127.0.0.1 - - [02/Jul/2024 12:39:59] "[35m[1mDELETE /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:40:29,234] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\delete_cloth.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:40:29,312] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:40:36,259] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\delete_cloth.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:40:36,339] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:41:15,683] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\delete_cloth.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:41:15,754] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:41:27,256] INFO 127.0.0.1 - - [02/Jul/2024 12:41:27] "POST /cloth HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:41:36,184] INFO 127.0.0.1 - - [02/Jul/2024 12:41:36] "[35m[1mDELETE /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:46:39,592] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:46:39,680] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:46:46,577] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:46:46,657] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:47:03,318] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:47:03,391] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:47:13,547] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:47:13,628] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:51:13,051] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\apis\\s3.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:51:13,124] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:51:28,685] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\apis\\__init__.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:51:28,763] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:51:45,424] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:51:45,502] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:52:10,762] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:52:10,847] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:53:19,915] INFO 127.0.0.1 - - [02/Jul/2024 12:53:19] "POST /cloth HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:53:45,154] INFO 127.0.0.1 - - [02/Jul/2024 12:53:45] "[31m[1mPUT /cloth HTTP/1.1[0m" 400 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:54:47,655] INFO 127.0.0.1 - - [02/Jul/2024 12:54:47] "[31m[1mPUT /cloth HTTP/1.1[0m" 400 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:55:26,778] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:55:26,855] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 

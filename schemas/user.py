@@ -23,8 +23,7 @@ class UserIdSchema(BaseModel):
 
 
 def apresenta_usuario(user, show_id = False):
-    """ Retorna uma representação do produto seguindo o schema definido em
-        ProdutoViewSchema.
+    """ Retorna uma representação do usuário.
     """
     if (show_id == True):
         return {

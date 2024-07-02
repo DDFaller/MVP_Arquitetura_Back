@@ -1,0 +1,82 @@
+[2024-07-02 12:55:39,670] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:55:48,800] ERROR Exception on /cloth [PUT] - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py L1449
+Traceback (most recent call last):
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\wrappers.py", line 128, in on_json_loading_failed
+    return super().on_json_loading_failed(e)
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\wrappers\request.py", line 611, in on_json_loading_failed
+    raise BadRequest(
+werkzeug.exceptions.BadRequest: 400 Bad Request: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\Workspace\MVP\arquitetura\back\app.py", line 140, in update_model_name
+    form = request.get_json()
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\wrappers\request.py", line 571, in get_json
+    return self.on_json_loading_failed(None)
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\wrappers.py", line 133, in on_json_loading_failed
+    raise BadRequest() from e
+werkzeug.exceptions.BadRequest: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Workspace\MVP\arquitetura\back\app.py", line 152, in update_model_name
+    session.rollback()
+UnboundLocalError: local variable 'session' referenced before assignment
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 1519, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask_cors\extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 1517, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask\app.py", line 1503, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask_openapi3\scaffold.py", line 273, in wrapper
+    resp = _do_wrapper(
+  File "D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\flask_openapi3\do_wrapper.py", line 135, in _do_wrapper
+    response = func(**request_kwargs)
+  File "D:\Workspace\MVP\arquitetura\back\app.py", line 156, in update_model_name
+    session.close()
+UnboundLocalError: local variable 'session' referenced before assignment
+[2024-07-02 12:55:48,805] INFO 127.0.0.1 - - [02/Jul/2024 12:55:48] "[35m[1mPUT /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:56:11,383] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:56:11,469] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:56:14,501] INFO 127.0.0.1 - - [02/Jul/2024 12:56:14] "[35m[1mPUT /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:56:47,816] INFO 127.0.0.1 - - [02/Jul/2024 12:56:47] "[35m[1mPUT /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:57:27,631] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\get_cloth_by_id.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:57:27,717] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:57:29,252] INFO 127.0.0.1 - - [02/Jul/2024 12:57:29] "[35m[1mPUT /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:57:50,902] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\get_cloth_by_id.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:57:50,984] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:57:54,245] INFO 127.0.0.1 - - [02/Jul/2024 12:57:54] "[35m[1mPUT /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:58:20,575] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:58:20,656] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:58:27,024] INFO 127.0.0.1 - - [02/Jul/2024 12:58:27] "[35m[1mPUT /cloth HTTP/1.1[0m" 500 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:59:01,050] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\schemas\\clothes.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:59:01,137] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:59:06,993] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\schemas\\clothes.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:59:07,069] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:59:18,308] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\schemas\\clothes.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:59:18,391] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:59:29,658] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:59:29,778] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 12:59:31,243] INFO 127.0.0.1 - - [02/Jul/2024 12:59:31] "PUT /cloth HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:00:27,481] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\app.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:00:27,553] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:00:28,738] INFO 127.0.0.1 - - [02/Jul/2024 13:00:28] "PUT /cloth HTTP/1.1" 200 - - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:00:56,146] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\get_cloth_by_id.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:00:56,219] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:01:03,121] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\get_cloth_by_id.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:01:03,201] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:01:05,823] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\get_cloth_by_id.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:01:05,909] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:01:14,996] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\get_cloth_by_id.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:01:15,068] INFO  * Restarting with stat - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
+[2024-07-02 13:01:23,092] INFO  * Detected change in 'D:\\Workspace\\MVP\\arquitetura\\back\\use_cases\\get_cloth_by_id.py', reloading - call_trace=D:\Workspace\MVP\arquitetura\back\env\lib\site-packages\werkzeug\_internal.py L224 
